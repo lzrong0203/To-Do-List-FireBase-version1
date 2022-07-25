@@ -65,6 +65,9 @@ struct TaskCell: View {
             Image(systemName: taskCellVM.task.completed ? "checkmark.circle.fill" : "circle")
                 .resizable()
                 .frame(width: 25, height: 25)
+                .onTapGesture {
+                    self.taskCellVM.task.completed.toggle()
+                }
             TextField("Enter the tasks title", text: $taskCellVM.task.title) {
                 self.onCommit(self.taskCellVM.task)
             }
