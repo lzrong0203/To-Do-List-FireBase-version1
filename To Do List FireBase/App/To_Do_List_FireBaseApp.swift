@@ -11,7 +11,7 @@ import SwiftUI
 struct To_Do_List_FireBaseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TaskListView()
         }
     }
 }
